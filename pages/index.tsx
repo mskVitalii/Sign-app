@@ -112,7 +112,7 @@ const Home: NextPage = () => {
           ref={signCanvas}
           className={styles.canvas}
           brushColor={settings.brushColor}
-          lazyRadius={settings.lazyRadius}
+          lazyRadius={0}
           brushRadius={settings.lazyRadius}
           hideInterface={true}
         />
