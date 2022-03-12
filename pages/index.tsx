@@ -56,6 +56,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (<div className={styles.container}>
