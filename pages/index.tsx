@@ -1,25 +1,21 @@
-import { useState, useEffect, useRef, ButtonHTMLAttributes } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image';
 import CanvasDraw, { CanvasDrawProps } from "react-canvas-draw";
 import styles from '../styles/Home.module.scss'
 
 
 /**
- * Canvas was built by react-canvas-draw;
+ * Canvas itself was built by react-canvas-draw;
  * For keyboard actions I use "useUffect" hook for client-side window API;
- *  
  */
 const Home: NextPage = () => {
 
+  //*------------------------------------------ Visual state
   const activeCopy = useRef<HTMLButtonElement>(null)
   function showCopied() {
-    console.log("showCopied", activeCopy.current);
     activeCopy.current?.focus()
-    setTimeout(() => {
-      activeCopy.current?.blur()
-    }, 2000)
+    setTimeout(() => activeCopy.current?.blur(), 2000)
   }
 
   //*------------------------------------------ Canvas
@@ -28,7 +24,6 @@ const Home: NextPage = () => {
     signCanvas.current?.clear()
   }
   function undo() {
-    console.log("undo");
     signCanvas.current?.undo()
   }
   async function save() {
@@ -62,8 +57,27 @@ const Home: NextPage = () => {
   return (<div className={styles.container}>
     <Head>
       <title>Sign-app</title>
+      <link rel="icon" href="/icon.svg" />
+      {/* Common */}
+      <meta charSet="UTF-8" />
       <meta name="description" content="web-app for sign drawing" />
-      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.8em%22 font-size=%2290%22>🖋️</text></svg>" />
+      <meta name="keywords" content="Sign, draw sign" />
+      <meta name="viewport" content="width=device-width" />
+      <meta name="Author" content="Popov Vitaly" />
+      {/* Social networks */}
+      <meta property="og:locale" content="en_EN" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Sign-app" />
+      <meta property="og:site_name" content="Sign-app" />
+      <meta property="og:description" content="web-app for sign drawing" />
+      <meta property="og:image" content="https://sign-app-mu.vercel.app/icon.svg" />
+      <meta property="og:url" content="https://sign-app-mu.vercel.app" />
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="Popov Vitaly" />
+      <meta name="twitter:title" content="Sign, draw sign" />
+      <meta name="twitter:description" content="web-app for sign drawing" />
+      <meta name="twitter:image" content="https://sign-app-mu.vercel.app/icon.svg" />
     </Head>
 
     <main className={styles.main}>
