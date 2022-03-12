@@ -88,7 +88,7 @@ const Home: NextPage = () => {
 
           <div className={styles.flex_column}>
             <label htmlFor="lazyRadius">Brush size</label>
-            <input type="range" min={1} max={10} id="lazyRadius" autoFocus
+            <input type="range" min={1} max={10} id="lazyRadius"
               value={settings.lazyRadius}
               onChange={({ target }) => setLazyRadius(+target.value)} />
 
