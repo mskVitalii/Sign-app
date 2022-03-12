@@ -17,3 +17,33 @@ a {
 * {
   box-sizing: border-box;
 }
+
+button {
+  background     : black;
+  box-shadow     : 0 4px 15px 0 rgba(124, 124, 124, 0.37);
+  backdrop-filter: blur(1.5px);
+  color          : #eaeaea;
+  border-radius  : 10px;
+  border         : 1px solid rgba(255, 255, 255, 0.18);
+  cursor         : pointer;
+
+  &:focus {
+    background-color: #3c4ac7;
+  }
+
+  &:active {
+    background-color: #4b5dff;
+  }
+
+  &.active_button {
+    background-color: rgb(37, 175, 71);
+    color           : #eaeaea;
+    outline         : none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .mobile-hide {
+    display: none;
+  }
+}
