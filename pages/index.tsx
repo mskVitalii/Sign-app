@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import CanvasDraw, { CanvasDrawProps } from 'react-canvas-draw';

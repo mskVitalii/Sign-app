@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -20,8 +20,8 @@
     "@types/node": "22.5.2",
     "@types/react": "18.3.5",
     "@types/react-canvas-draw": "^1.2.3",
-    "eslint": "9.9.1",
-    "eslint-config-next": "14.2.7",
-    "typescript": "5.5.4"
+    "typescript": "5.4",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7"
   }
 }
