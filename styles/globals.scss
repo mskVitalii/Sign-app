@@ -51,3 +51,31 @@ button {
     display: none;
   }
 }
+
+input[type="range"] {
+  appearance: none;
+  width: 200px;
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #1a73e8; /* Цвет кружка: синий */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #1a73e8; /* Цвет кружка: синий */
+  border-radius: 50%;
+  cursor: pointer;
+}
